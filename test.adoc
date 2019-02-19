@@ -74,14 +74,13 @@ image:images/cc8e5b11ed8dc671.png[create_connection, role="integr8ly-img-respons
 image:images/afc5ecffc2c5647.png[database_connector,role="integr8ly-img-responsive"]
 . use the following connection details and validate them:
     * Connection details:
-    jdbc:postgresql://manny.db.elephantsql.com:5432/hxuazyrm
-    username: hxuazyrm
-    password: eiHvH6xbZ2_DRdeoAu_tLbNe3des_NUf
-    schema: hxuazyrm
+    * jdbc:postgresql://manny.db.elephantsql.com:5432/hxuazyrm
+    * username: hxuazyrm
+    * password: eiHvH6xbZ2_DRdeoAu_tLbNe3des_NUf
+    * schema: hxuazyrm
 image:images/73559a9acd287dcc.png[database_details,role="integr8ly-img-responsive"]
 
-. let’s name the connection and finalize the configuration of the
-connector (click *Create*).
+. let’s name the connection and finalize the configuration of the connector (click *Create*)
 image:images/e54af7f9e9f361f0.png[connection_name,role="integr8ly-img-responsive"]
 image:images/27f751a316bb458c.png[connection_create,role="integr8ly-img-responsive"]
 
@@ -92,6 +91,7 @@ finishing point.
 Now that we have configured the end of the integration path we want to
 build and we will see where to find the start and we will put the two
 pieces together. 
+
 . click on *Integrations* and then *create integration*
 image:images/280d22705b1b958d.png[new_integration,role="integr8ly-img-responsive"]
 
