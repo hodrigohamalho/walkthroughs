@@ -68,12 +68,10 @@ have a public direct connection to the DB to use.
 
 . open a browser and log into link:{fuse-url}[{integration-service}, window="_blank"] window
 . click on *Connections* and then *Create connection*
-
-    image:images/96672c415fe25036.png[image,width=624,height=293]
-    image:images/cc8e5b11ed8dc671.png[image,width=624,height=226]
-
+image:images/96672c415fe25036.png[connections, role="integr8ly-img-responsive"]
+image:images/cc8e5b11ed8dc671.png[create_connection, role="integr8ly-img-responsive"]
 . select *Database* connector
-    image:images/afc5ecffc2c5647.png[image,width=624,height=218]
+image:images/afc5ecffc2c5647.png[database_connector,role="integr8ly-img-responsive"]
 Use the following connection details and validate them:
 
 Connection details:
