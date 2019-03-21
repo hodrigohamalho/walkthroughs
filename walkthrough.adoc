@@ -145,7 +145,7 @@ Login into the integr8ly environment main page
 
 https://tutorial-web-app-webapp.apps.openbanking-fe8e.openshiftworkshop.com/[https://tutorial-web-app-webapp.apps.openbanking-fe8e.openshiftworkshop.com]
 
-image:images/e53f27072555fc95.png[image,width=624,height=271]
+image:images/e53f27072555fc95.png[]
 
 We will see how integr8ly environment works and what you get. It
 provides out of the box integration between products but it doesn’t
@@ -162,7 +162,7 @@ will get there by clicking *Red Hat Fuse* link in the tutorial
 dashboard. We will see the main functionalities of it and then use it to
 build a simple integration block.
 
-image:images/79764895c2c935a5.png[image,width=624,height=291]
+image:images/79764895c2c935a5.png[]
 
  +
 
@@ -171,7 +171,7 @@ important when you need to check messages coming from the requests being
 sent and in general to give an overview of the deployed integration
 blocks.
 
-image:images/42eab354684343ed.png[image,width=624,height=211]
+image:images/42eab354684343ed.png[]
 
 The integration window (*Integrations*) allows you to have a graphical
 representation of the mediation/transformation and is the first tool to
@@ -181,7 +181,7 @@ environment as well) and although the connectors available right now are
 just few the number will grow dramatically as this is the repository
 http://camel.apache.org/components.html .
 
-image:images/96672c415fe25036.png[image,width=624,height=204]
+image:images/96672c415fe25036.png[]
 
 (*Connections*) you can start or end (or sometimes interpose)
 connections which are fully configured connectors. We will be showing
@@ -190,13 +190,13 @@ the configuration of one connector during today’s lab.
 Various connectors are available and new connectors are coming in the
 future and will be ported onto Fuse Online.
 
-image:images/a5b5ab9707b881b6.png[image,width=624,height=205]
+image:images/a5b5ab9707b881b6.png[]
 
 (*Customizations*) there are two panes available here, the first one
 dedicated to API connections, which we will be using afterwards as
 Connection in the Integration.
 
-image:images/7a990144c0f6736c.png[image,width=624,height=244]
+image:images/7a990144c0f6736c.png[]
 
 (*Extensions* panel) this is the part where you can extend the
 functionalities of the platform. You can compile a custom or community
@@ -225,12 +225,12 @@ have a public direct connection to the DB to use.
 
 *Connections ->* *Create connection*
 
-image:images/96672c415fe25036.png[image,width=624,height=293]
-image:images/cc8e5b11ed8dc671.png[image,width=624,height=226]
+image:images/96672c415fe25036.png[]
+image:images/cc8e5b11ed8dc671.png[]
 
 Select *Database* connector
 
-image:images/afc5ecffc2c5647.png[image,width=624,height=218]
+image:images/afc5ecffc2c5647.png[]
 Use the following connection details and validate them:
 
 Connection details:
@@ -244,18 +244,18 @@ schema: hxuazyrm
 
  +
 
-image:images/73559a9acd287dcc.png[image,width=625,height=253]
+image:images/73559a9acd287dcc.png[]
 
 Let’s name the connection and finalize the configuration of the
 connector (*Create*).
 
  +
 
-image:images/e54af7f9e9f361f0.png[image,width=626,height=192]
+image:images/e54af7f9e9f361f0.png[]
 
  +
 
-image:images/27f751a316bb458c.png[image,width=609,height=274]
+image:images/27f751a316bb458c.png[]
 
 We can now use this connection as an integration starting, middle or
 finishing point.
@@ -266,7 +266,7 @@ Now that we have configured the end of the integration path we want to
 build and we will see where to find the start and we will put the two
 pieces together. *Integrations -> create integration*
 
-image:images/280d22705b1b958d.png[image,width=624,height=185]
+image:images/280d22705b1b958d.png[]
 
 We will start by exposing a REST endpoint that will then get mapped to
 the backend datasource.
@@ -275,13 +275,13 @@ Use the *API Provider* connector with the following OpenAPI file:
 
 https://raw.githubusercontent.com/lucamaf/open-banking-roadshow/master/open-data-apis-nokey.json[https://raw.githubusercontent.com/lucamaf/open-banking-roadshow/master/open-data-apis-nokey.json]
 
-image:images/ed8669f693bd4125.png[image,width=630,height=321]
+image:images/ed8669f693bd4125.png[]
 
  +
 
  +
 
-image:images/b0394fb1d4aa76f1.png[image,width=563,height=280]
+image:images/b0394fb1d4aa76f1.png[]
 
 The definition is the same one seen on the Open Banking solution portal
 for Open Data APIs.
@@ -291,7 +291,7 @@ identified so we can proceed with the configuration of the connector.
 
 To show how easy it is to correct definitions *-> review/edit*
 
-image:images/ab579bf7c7c7a970.png[image,width=624,height=295]
+image:images/ab579bf7c7c7a970.png[]
 
 This opens a window on Apicurito which is a scaled down version of
 Apicurio, our API Design platform. It is fairly easy to change elements
@@ -306,11 +306,11 @@ not adding any authentication on top of it by default.
 
 Name the integration.
 
-image:images/779b713f06dc279c.png[image,width=608,height=272]
+image:images/779b713f06dc279c.png[]
 
 And *save and continue*
 
-image:images/e32edb47852d1741.png[image,width=624,height=182]
+image:images/e32edb47852d1741.png[]
 
  +
 
@@ -319,11 +319,11 @@ _get banks_ (/banks) one.
 
  +
 
-image:images/47e3c25deb708969.png[image,width=624,height=254]
+image:images/47e3c25deb708969.png[]
 
 Click on *get list of banks*
 
-image:images/22764bfa357fbe17.png[image,width=624,height=192]
+image:images/22764bfa357fbe17.png[]
 
 We now have a dumb pipe which connects an endpoint to receive user
 requests and return always 200 (all OK) - the return blue arrow symbol.
@@ -334,18 +334,18 @@ a terminating connection.
 
 *Add a connection*
 
-image:images/46d6df461e6c631a.png[image,width=601,height=310]
+image:images/46d6df461e6c631a.png[]
 
 Click on the previously configured data source.
 
-image:images/21b2ac307322cf20.png[image,width=602,height=270]
+image:images/21b2ac307322cf20.png[]
 
 And we will invoke a simple SQL statement to return the data from a
 single table.
 
  +
 
-image:images/b6979e02c028afc0.png[image,width=595,height=261]
+image:images/b6979e02c028afc0.png[]
 
 The simple statement to introduce is:
 
@@ -356,32 +356,32 @@ _select * from banks_
 When you click *done* the statement will validate and you should be able
 to proceed with the configuration of the integration.
 
-image:images/5fb99be3a08333a3.png[image,width=624,height=218]
+image:images/5fb99be3a08333a3.png[]
 
 And now let’s add a simple log of the requests coming through. Add a
 step.
 
-image:images/82b4ed0da7a5fd2.png[image,width=624,height=196]
+image:images/82b4ed0da7a5fd2.png[]
 
 Select the log step.
 
-image:images/98581be0c5f2ec73.png[image,width=624,height=193]
+image:images/98581be0c5f2ec73.png[]
 
 We are going to be sending a copy of the responses coming through to the
 integration log.
 
  +
 
-image:images/9ba03875f242b5e0.png[image,width=624,height=182]
+image:images/9ba03875f242b5e0.png[]
 
 We are going to log just the message body.
 
-image:images/1e4a2d5544d458c1.png[image,width=624,height=231]
+image:images/1e4a2d5544d458c1.png[]
 
 We are now ready to deploy and expose this integration in our platform,
 to use it. Hit *Publish*
 
-image:images/ad4c8088051091f7.png[image,width=624,height=195]
+image:images/ad4c8088051091f7.png[]
 
 You can check the progress in building the integration changing through
 phases.
@@ -409,7 +409,7 @@ https://open-data.b9ad.pro-us-east-1.openshiftapps.com/open-data/banks[]http://i
 API tester works as a full Web or Mobile application but stripped down
 of the GUI.
 
-image:images/4a8146fd0ad53451.png[image,width=591,height=393]
+image:images/4a8146fd0ad53451.png[]
 
 Populate the fields with the following URL
 
@@ -417,11 +417,11 @@ http://i-db2rest-fuse-7df78d66-28d4-11e9-aad0-0a580a010007.apps.openbanking-fe8e
 
 and hit *Test*
 
-image:images/5b1e8edd4c2fd8cb.png[image,width=570,height=378]
+image:images/5b1e8edd4c2fd8cb.png[]
 
 Show that everything went 200 fine and open the Response Body (eye icon)
 
-image:images/83a67bd30b02d5f2.png[image,width=476,height=95]
+image:images/83a67bd30b02d5f2.png[]
 
 The response is in JSON format, with basic information given around
 banks (dummy data).
@@ -444,7 +444,7 @@ received.
 
  +
 
-image:images/fbbdd08773f7d951.png[image,width=624,height=317]
+image:images/fbbdd08773f7d951.png[]
 
  +
 
@@ -460,7 +460,7 @@ configuring the service.
 
  +
 
-image:images/7ea5a1314c59ec66.png[image,width=565,height=315]
+image:images/7ea5a1314c59ec66.png[]
 
  +
 
@@ -470,7 +470,7 @@ management to go and look for services in our container platform.
 
  +
 
-image:images/d60df648c3a5608c.png[image,width=615,height=171]
+image:images/d60df648c3a5608c.png[]
 
  +
 
@@ -480,14 +480,14 @@ starting the service configuration.
 
  +
 
-image:images/110f274df1b4c611.png[image,width=624,height=241]
+image:images/110f274df1b4c611.png[]
 
 You will be redirected to the Dashboard view where a success message
 should appear as shown in the following screenshot.
 
  +
 
-image:images/2c4bc51aa8e15fca.png[image,width=624,height=144]
+image:images/2c4bc51aa8e15fca.png[]
 
 Once the service is created you will see that in the dropdown menu where
 you can also see *Audience.*
@@ -500,13 +500,13 @@ Developers can sign up for the open financial API.
 
 *API-> Integration-> Configuration*
 
-image:images/9fd97b34ec6b2225.png[image,width=624,height=324]
+image:images/9fd97b34ec6b2225.png[]
 
 This is where you configure the rest of the details of the mapped and
 protected Service. The private base URL should already be filled with
 the details coming from the auto-discovery feature.
 
-image:images/8bac22906f51784f.png[image,width=623,height=343]
+image:images/8bac22906f51784f.png[]
 
 We have the section where we map the Backend API (or in this case
 Integration service) and then 2 URLs where we expose the managed API on
@@ -517,7 +517,7 @@ can be the same address (please notice the format of the staging and
 public base url for the gateways
 https://userX.amp.apps.openbanking-fe8e.openshiftworkshop.com)
 
-image:images/ce482302584bc0be.png[image,width=618,height=257]
+image:images/ce482302584bc0be.png[]
 
 We will now make sure we map a single endpoint or resource in 3scale and
 disallow any other endpoint (i.e. the other endpoints have not been
@@ -530,22 +530,22 @@ end of the path that will allow us to make sure users cannot improperly
 access any other sub-resource). We can now check and change the
 configuration of authentication settings.
 
-image:images/26af3be6a8c9a397.png[image,width=624,height=251]
+image:images/26af3be6a8c9a397.png[]
 
 We see that we have already api key protection enabled, but we might
 want to pass this information as HTTP Header instead of HTTP parameter.
 We will also change the header name to ‘key’
 
-image:images/cf46394b49ceedd3.png[image,width=624,height=273]
+image:images/cf46394b49ceedd3.png[]
 
 You can also customize the error returned to the end user. *Policies*
 
-image:images/da30bcf933e150f0.png[image,width=624,height=300]
+image:images/da30bcf933e150f0.png[]
 
 These are like additional plugin that you can configure to adapt the
 service to your own preference. *Add Policy*
 
-image:images/94e8c7035d81dcc8.png[image,width=624,height=304]
+image:images/94e8c7035d81dcc8.png[]
 
 Several policies are available and the list is always increasing. Two
 policies / functionalities are of importance: SOAP policy to map SOAP
@@ -564,7 +564,7 @@ The second one will fail since we are not providing any valid key, so we
 will get unauthorized request but the gateway will receive the updated
 configuration in any case.
 
-image:images/9fe54b4583cb1150.png[image,width=624,height=278]
+image:images/9fe54b4583cb1150.png[]
 
 We will now fix the test request error as advised by the warning
 message.
@@ -581,7 +581,7 @@ the way to do that (also known as API Contracts).
 
  +
 
-image:images/acb4f3c100480178.png[image,width=624,height=324]
+image:images/acb4f3c100480178.png[]
 
 Fill out the *Name* and *System Name* fields on the *create application
 plan* form and click the blue button to submit the form.
@@ -589,7 +589,7 @@ plan* form and click the blue button to submit the form.
 You can safely ignore for now the monetization options and use whichever
 name you prefer.
 
-image:images/616acb12bebd94f5.png[image,width=624,height=315]
+image:images/616acb12bebd94f5.png[]
 
  +
 
@@ -597,14 +597,14 @@ image:images/616acb12bebd94f5.png[image,width=624,height=315]
 
  +
 
-image:images/4e368ec757201950.png[image,width=624,height=211]
+image:images/4e368ec757201950.png[]
 
 We see that we have 1 API contract (or Application Plan), but no
 application associated to it. The application plans are in **hidden**
 state by default, so let’s publish this one so that it is usable and
 visible on the Developer portal. Let’s open the application plan.
 
-image:images/668958cd9c28fd37.png[image,width=624,height=295]
+image:images/668958cd9c28fd37.png[]
 
 Main elements:
 
@@ -614,18 +614,18 @@ and rate limiting settings
 
 Don’t modify anything beside filling _Name_ and _System name_.
 
-image:images/cf19f879103a7b28.png[image,width=624,height=228]
+image:images/cf19f879103a7b28.png[]
 
 We can now switch to the Audience tab to create an Application to test
 the Configuration, by clicking on Listing.
 
-image:images/c0d600426b8fb315.png[image,width=632,height=203]
+image:images/c0d600426b8fb315.png[]
 
 From here we can see how we can, as Provider, approve or deny
 Developers’ Accounts registrations. Let’s click on the default
 *Developer *Account
 
-image:images/ea040015c56d65d6.png[image,width=624,height=301]
+image:images/ea040015c56d65d6.png[]
 
 We can see that the Developer has the default application associated,
 but it’s subscribed to the default Service. We can also see the
@@ -634,9 +634,9 @@ Developer user details.
 Let’s click on * *Applications* *in the top level navigation and*
 *Create application
 
-image:images/498ec8af8c7c1f6f.png[image,width=624,height=109]
+image:images/498ec8af8c7c1f6f.png[]
 
-image:images/e6825c2ff83122dd.png[image,width=624,height=276]
+image:images/e6825c2ff83122dd.png[]
 
 Here we can now subscribe the application to the *Application plan* we
 created on our new Service from the drop down field available. Let’s
@@ -649,12 +649,12 @@ We now have an assigned key so we can go back to the Configuration
 window of the API service and make a successful test call. *API ->
 Integration -> edit Apicast configuration*
 
-image:images/38ce69d07b691c0c.png[image,width=633,height=284]
+image:images/38ce69d07b691c0c.png[]
 
 We now have a pre-populated key in the example curl statement, let’s try
 again testing the deployed configuration.
 
-image:images/521ac6bcced523b3.png[image,width=619,height=271]
+image:images/521ac6bcced523b3.png[]
 
 As we can see we turned the testing into a success.
 
@@ -665,24 +665,24 @@ portal. You can access it by selecting in to the top menu in *Audience
 The sidebar allows us to edit pages of the Developer Portal live, but we
 are not interested in it now so we can close it.
 
-image:images/9081532fd1071a54.png[image,width=624,height=248]
+image:images/9081532fd1071a54.png[]
 
 Let’s sign in with the default user credentials provided in the sidebar.
 This is the default developer user, created for the default developer
 account [john / 123456]
 
-image:images/7484dcb96be36e7f.png[image,width=624,height=328]
+image:images/7484dcb96be36e7f.png[]
 
 We are now logged in the developer’s dashboard. Let’s see the
 Applications I have created
 
-image:images/e17389bfabb24528.png[image,width=624,height=257]
+image:images/e17389bfabb24528.png[]
 
 I can now use the credential that I have associated with the application
 and test the protected service. Let’s move to the online API testing
 tool, https://apitester.com/
 
-image:images/d844d76199032049.png[image,width=564,height=348]
+image:images/d844d76199032049.png[]
 
 Use the URL for your API gateway, the following format should be
 configured in your service already:
@@ -691,14 +691,14 @@ the the key Header and the associated value.
 
  +
 
-image:images/6b9b83227e4b5c61.png[image,width=624,height=293]
+image:images/6b9b83227e4b5c61.png[]
 
 As we can see we succeed with 200 OK!
 
 Let’s now just test with a wrong key or path then to confirm the role of
 API Management.
 
-image:images/96dbe78ea40a3465.png[image,width=624,height=299]
+image:images/96dbe78ea40a3465.png[]
 
 As expected we receive a Forbidden error.
 
@@ -706,7 +706,7 @@ As expected we receive a Forbidden error.
 [[_4d34og8]]Checkpoint
 ^^^^^^^^^^^^^^^^^^^^^^
 
-image:images/fddc0fee533b6ed5.png[image,width=624,height=73]
+image:images/fddc0fee533b6ed5.png[]
 
 [[break]]
 [[_sy47th3sxp9y]]Break
@@ -742,7 +742,7 @@ Let’s start with RH SSO main dashboard
 
 http://sso.apps.openbanking-fe8e.openshiftworkshop.com/auth/[http://sso.apps.openbanking-fe8e.openshiftworksho]http://sso.apps.openbanking-fe8e.openshiftworkshop.com/auth/[p.com/auth/]
 
-image:images/8831e631641c6339.png[image,width=620,height=295]
+image:images/8831e631641c6339.png[]
 
 The realms are like separate instances of the platform, dedicated to
 separating users and applications. As we can see we can customize
@@ -751,14 +751,14 @@ tokens’ default parameters. *Endpoints -> OpenID Endpoint Configuration*
 
  +
 
-image:images/e28d9c693abafded.png[image,width=560,height=323]
+image:images/e28d9c693abafded.png[]
 
 This is where we can find the public endpoints of the Realm exposed by
 RH SSO (we are going to be using this later).
 
 Let’s now take a look at the Clients section.
 
-image:images/fd48e097b178ebbe.png[image,width=624,height=203]
+image:images/fd48e097b178ebbe.png[]
 
 Here we can configure the web or mobile applications that will
 authenticate using RH SSO as an IDP (corresponding to applications in
@@ -769,14 +769,14 @@ authentication in the integr8ly environment.
 
 Users -> View all users
 
-image:images/2324d65796ea09f4.png[image,width=624,height=270]
+image:images/2324d65796ea09f4.png[]
 
 Here we can see all the end users that are stored inside RH SSO, making
 it act as an IDM as well. These are the end users of the applications
 created in the Clients section and they will be able to authenticate
 through them. Let’s open one of these users’ details.
 
-image:images/7efedd3c16f5656b.png[image,width=520,height=238]
+image:images/7efedd3c16f5656b.png[]
 
 We can see here the type of information stored along with basic user
 details. The user profile can be customized with additional attributes
@@ -795,17 +795,17 @@ this feature, we let 3scale sync the applications to RH SSO, as well as
 obviously authenticating our API calls. Let’s create a special type of
 such Client in RH SSO under Threescale realm. *Clients -> Create*
 
-image:images/129b5831c04132c3.png[image,width=583,height=313]
+image:images/129b5831c04132c3.png[]
 
 Let’s call it sync-app and configure the other details required to let
 it communicate with 3scale.
 
-image:images/eab56fea4334c68b.png[image,width=465,height=352]
+image:images/eab56fea4334c68b.png[]
 
 We are going to give it only the rights to create applications on behalf
 of 3scale (_service accounts enabled_ only).
 
-image:images/9807e843aeb27ec5.png[image,width=468,height=347]
+image:images/9807e843aeb27ec5.png[]
 
 *Save -> Service account roles*
 
@@ -814,7 +814,7 @@ realm-management in the Client roles menu, this special role allows it
 to create application on behalf of API management. Then click add
 selected
 
-image:images/39390b96648e97fa.png[image,width=503,height=259]
+image:images/39390b96648e97fa.png[]
 
 And now we are ready to use the client credentials inside 3scale OIDC
 configuration section.
@@ -822,16 +822,16 @@ configuration section.
 To authenticate as we were an end user, we will need to create one test
 user, so let’s go to the Users section and add a user
 
-image:images/7e6ba75693536cb.png[image,width=624,height=207]
+image:images/7e6ba75693536cb.png[]
 
 We will fill in all the user details and switch to user email verified
 
-image:images/9b1d407842e8c6c2.png[image,width=574,height=267]
+image:images/9b1d407842e8c6c2.png[]
 
 Now we will set the password, by going to credentials and setting it to
 _password_ and reset password.
 
-image:images/a8644b7f2fca49c5.png[image,width=604,height=279]
+image:images/a8644b7f2fca49c5.png[]
 
 We have now all the elements to proceed with the corresponding
 configuration on API management to authenticate calls using our RH SSO.
@@ -844,18 +844,18 @@ configuration on API management to authenticate calls using our RH SSO.
 Let’s now switch back to 3scale to configure the API management side of
 OIDC authentication.
 
-image:images/2497a378b125866a.png[image,width=624,height=325]
+image:images/2497a378b125866a.png[]
 
 We can see that we have a fully configured API with API key as the
 Authentication method. We are going to change it to the more secure
 OpenID Connect, to ensure our financial data are protected from attacks
 performed when a key is compromised. *Edit integration settings*
 
-image:images/68f608e7c269cf4d.png[image,width=624,height=325]
+image:images/68f608e7c269cf4d.png[]
 
 We are going to change it to OpenID Connect. *Update service*
 
-image:images/bc3bd60863779aa7.png[image,width=624,height=325]
+image:images/bc3bd60863779aa7.png[]
 
 Clearly the platform is warning us that we have customers using this API
 and it might break their application, changing the authentication
@@ -863,13 +863,13 @@ method. In a real world case, we would inform the developer in advance
 by using the messaging and notification functionality available within
 the platform.
 
-image:images/2f04b14f929ec230.png[image,width=624,height=324]
+image:images/2f04b14f929ec230.png[]
 
 We have now changed the authentication method, we are just left with
 configuring the correct IdP inside 3scale to make sure it is
 authenticating the requests with RH SSO. *edit apicast configuration*
 
-image:images/916e89e7d700f345.png[image,width=501,height=395]
+image:images/916e89e7d700f345.png[]
 
 As we see we have a dedicated field for this purpose now: *OpenID
 C***o***nnect Issuer*
@@ -892,12 +892,12 @@ Lastly, change the Credentials location to As HTTP Headers
 And update the staging environment and promote the configuration to
 production by clicking the blue button _Promote to production_.
 
-image:images/d50d65d97688f892.png[image,width=624,height=264]
+image:images/d50d65d97688f892.png[]
 
 Let’s now switch user perspective and get in the shoes of the developer
 and open their Applications section.
 
-image:images/fac123499262120d.png[image,width=624,height=513]
+image:images/fac123499262120d.png[]
 
 We can see the secret of their application is absent as is the redirect
 URL. We are going to generate the first and add as redirect url the
@@ -905,16 +905,16 @@ following
 https://openidconnect.net/callback[https://openidconnect.net/callback] 
 (we are going to explain why in a moment).
 
-image:images/c39ad9744bfbd9c1.png[image,width=527,height=199]
+image:images/c39ad9744bfbd9c1.png[]
 
 Let’s make sure that the application is now aligned in terms of
 credentials both in 3scale and RH SSO.
 
-image:images/f74213908594b9b1.png[image,width=624,height=325]
+image:images/f74213908594b9b1.png[]
 
-image:images/1c71f9c4b12979bd.png[image,width=614,height=266]
+image:images/1c71f9c4b12979bd.png[]
 
-image:images/cdb9a6ebe35b05fb.png[image,width=603,height=321]
+image:images/cdb9a6ebe35b05fb.png[]
 
 All looks good! Let’s now try to authenticate the end user, using OpenID
 Connect.
@@ -938,7 +938,7 @@ created in the 3scale developer portal / 3scale admin portal or RH SSO
 since they are all the same.
 
 And lastly as scope we are going to add *openid* and *email*.
-*SAVE*image:images/49b9879e91c55673.png[image,width=601,height=404]
+*SAVE*image:images/49b9879e91c55673.png[]
 
 Start the authentication flow by hitting start. You are going to be
 redirected to the RH SSO login interface where you can use the default
@@ -948,11 +948,11 @@ credentials or access token.
 
  +
 
-image:images/a74a02136b460977.png[image,width=388,height=409]
+image:images/a74a02136b460977.png[]
 
 Hit *Exchange*
 
-image:images/803e834a46810204.png[image,width=482,height=450]
+image:images/803e834a46810204.png[]
 
 You will receive the “access_token” which is an expiring credential that
 we will be using to authenticate with 3scale to get access to the
@@ -963,17 +963,17 @@ expire “expires_in”.
 We can hit *NEXT* and id_token will also be shown, which contains more
 user related details.
 
-image:images/b1b7fdb8e4bbfd6f.png[image,width=427,height=319]
+image:images/b1b7fdb8e4bbfd6f.png[]
 
 We can decode the information on the website JWT.io and found our user
 details once again as passed to the Backend service.
 
-image:images/f768b20c937f3600.png[image,width=473,height=288]
+image:images/f768b20c937f3600.png[]
 
 Let’s now go back to https://openidconnect.net/ website and copy the
 “access_token” value in the step 2 (the long string).
 
-image:images/58ef826168594763.png[image,width=316,height=415]
+image:images/58ef826168594763.png[]
 
 It should look something like this:
 
@@ -986,15 +986,15 @@ protected service.
 Let’s go back to our api tester and add this as an Authorization header.
 The format is Authorization Bearer <access_token_value_here>
 
-image:images/d75c81d544f50343.png[image,width=624,height=149]
+image:images/d75c81d544f50343.png[]
 
 Let’s hit *Test*
 
-image:images/102dee4cafcf2a9a.png[image,width=467,height=292]
+image:images/102dee4cafcf2a9a.png[]
 
 And success!
 
-image:images/f97f9066ba9ec021.png[image,width=321,height=269]
+image:images/f97f9066ba9ec021.png[]
 
 The work done by the API management behind the curtain is quite
 impressive:
@@ -1030,7 +1030,7 @@ As user you will login into openshift and it already looks evident that
 the end user has been profiled as developer on OpenShift as he has
 access only to Objects and Projects he created.
 
-image:images/94cf31260f6228ed.png[image,width=624,height=271]
+image:images/94cf31260f6228ed.png[]
 
 If we click on the fuse project we will be able to access to the Fuse
 Online installation dedicated to the user. We would also be able to see
@@ -1039,14 +1039,14 @@ any integration project running alongside Fuse installation.
 If we switch to the **C***luster console*, this will give us some
 Operations details on the project created or assigned to our user.
 
-image:images/f14f20fc92b1507e.png[image,width=624,height=238]
+image:images/f14f20fc92b1507e.png[]
 
 This type of console is also used by Operations administrators to check
 the health of OpenShift.
 
 We can see the RBAC in action if we click on *Home -> Status*
 
-image:images/f811f2d02f057f50.png[image,width=624,height=255]
+image:images/f811f2d02f057f50.png[]
 
 The *Project default* is excluded from the scope of any evals users,
 since it can contain system components and privileged objects.
@@ -1054,16 +1054,16 @@ since it can contain system components and privileged objects.
 We can just switch to the Fuse project to see if there anything wrong
 with it in the cluster.
 
-image:images/c0cd9fdf543ff655.png[image,width=624,height=262]
+image:images/c0cd9fdf543ff655.png[]
 
 We will now try as bad intentioned user to change some parameters around
 the installed products.
 
-image:images/83e67faa391814f8.png[image,width=624,height=275]
+image:images/83e67faa391814f8.png[]
 
-image:images/e6de76cfbb995876.png[image,width=575,height=304]
+image:images/e6de76cfbb995876.png[]
 
-image:images/b769adf958203399.png[image,width=583,height=309]
+image:images/b769adf958203399.png[]
 
 As we can see we tried to kill one of the running components of our
 integration platform with no success, because of the roles assigned to
@@ -1075,34 +1075,34 @@ my user.
 Let’s see the magic introduced by OpenShift and login as administrator
 of the platform once again.
 
-image:images/572f00309b946a0e.png[image,width=624,height=244]
+image:images/572f00309b946a0e.png[]
 
 We now have full access to all the platforms from all users. We will
 open as admin one of the Fuse projects and open one of the components of
 Fuse Online.
 
-image:images/8c0af3aadd4d88f5.png[image,width=624,height=295]
+image:images/8c0af3aadd4d88f5.png[]
 
 We are going to test the auto healing capabilities of the platform by
 killing one if its running components, in particular the one providing
 the UI service.
 
-image:images/83307e94164c4000.png[image,width=624,height=284]
+image:images/83307e94164c4000.png[]
 
-image:images/3339cc10a8054cbb.png[image,width=624,height=259]
+image:images/3339cc10a8054cbb.png[]
 
-image:images/1de842adeb97d45e.png[image,width=624,height=181]
+image:images/1de842adeb97d45e.png[]
 
-image:images/e7b64bd1399dc5ac.png[image,width=624,height=296]
+image:images/e7b64bd1399dc5ac.png[]
 
 As you can see we just deleted a Pod and we will verify that UI is
 broken by accessing the interface of Fuse Online
 
-image:images/9fcd39bec9b5a785.png[image,width=624,height=208]
+image:images/9fcd39bec9b5a785.png[]
 
-image:images/243134ddf7069bc8.png[image,width=624,height=292]
+image:images/243134ddf7069bc8.png[]
 
-image:images/5966ea7d7b8937a3.png[image,width=624,height=294]
+image:images/5966ea7d7b8937a3.png[]
 
 As we can see the component auto-healed thanks to OpenShift features and
 in a few seconds we have a GUI running once again for the integration
