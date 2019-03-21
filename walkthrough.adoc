@@ -234,13 +234,11 @@ image:images/afc5ecffc2c5647.png[]
 Use the following connection details and validate them:
 
 Connection details:
-jdbc:postgresql://manny.db.elephantsql.com:5432/hxuazyrm
 
-username: hxuazyrm
-
-password: eiHvH6xbZ2_DRdeoAu_tLbNe3des_NUf
-
-schema: hxuazyrm
+  jdbc:postgresql://manny.db.elephantsql.com:5432/hxuazyrm
+  username: hxuazyrm
+  password: eiHvH6xbZ2_DRdeoAu_tLbNe3des_NUf
+  schema: hxuazyrm
 
  +
 
